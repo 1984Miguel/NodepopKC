@@ -12,10 +12,22 @@ tags: [String]
 
 });
 
+anuncioSchema.statics.list= function (filter, limit,skip, fields, sort, callback){
+
+   const query= Anuncio.find(filter) ;
+   //query.rango(rango);
+   query.limit(limit);
+   query.skip(skip);
+   query.select(fields);
+   query.sort(sort);
+
+   query.exec(callback);
+};
+
 var Anuncio = mongoose.model("Anuncio", anuncioSchema);
 
 module.exports= Anuncio; 
-
+/*
 var PrimerAnuncio = new Anuncio({
 
 "nombre": "Bicicleta",
@@ -26,6 +38,8 @@ var PrimerAnuncio = new Anuncio({
 
 });
 
+
+
 PrimerAnuncio.save(function(err, doc){
     if(err)
     {
@@ -33,4 +47,4 @@ PrimerAnuncio.save(function(err, doc){
     }
     console.log("anuncio guardado");
 });
-
+*/

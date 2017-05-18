@@ -14,10 +14,10 @@ clave: String
 var Usuario = mongoose.model("Usuario", usuarioSchema);
 
 module.exports= Usuario; 
-
+/*
 var PrimerUsuario =  new Usuario({
-    name : 'Pepito Perez',
-    email: 'pepito@pepito.com',
+    nombre : 'eloy',
+    email: 'eloy@pepito.com',
     clave: "12345"
 });
 
@@ -29,3 +29,4 @@ PrimerUsuario.save((err,data)=>{
         console.log("guardado usuario");
 
 });
+*/
