@@ -6,8 +6,9 @@ const Anuncio = require("../models/anuncio")
 const Usuario = require("../models/Usuario")
 
 const enigma= require("enigma-code")
-const valorEncriptacion = 5;//puede ser cualquier numero 
-let key = 'millave';//No debe tener espacios 
+const Enigma= require("enigma-code") // traigo modulo de enigmas
+const EnigmaClaves=require("../lib/enigma"); // obtengo clave y valor de encriptacion
+
 
 console.log(" borro y creo bases de datos");
 
@@ -69,7 +70,7 @@ function leerarchivouser(loc)
                  {    
                      const usuario = new Usuario(aux[i]);
 
-                      enigma.genHash(valorEncriptacion,key,usuario.clave,function(err,hash){
+                      enigma.genHash(EnigmaClaves.valorEncriptacion,EnigmaClaves.key,usuario.clave,function(err,hash){
                             if(err) return console.log(err);//Solo se ejecutara si existe un error 
                     usuario.clave=hash;
                     console.log(hash)//2dl3lkwkj13kj12k12kj321kj 

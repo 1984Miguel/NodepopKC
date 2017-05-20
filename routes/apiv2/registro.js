@@ -3,11 +3,12 @@
 var express = require('express');
 var router = express.Router();
 const Usuario = require("../../models/Usuario")
-const enigma= require("enigma-code")
+const Enigma= require("enigma-code") // traigo modulo de enigmas
+const EnigmaClaves=require("../../lib/enigma"); // obtengo clave y valor de encriptacion
 
 
-const valorEncriptacion = 5;//puede ser cualquier numero 
-let key = 'millave';//No debe tener espacios 
+//const valorEncriptacion = 5;//puede ser cualquier numero 
+//let key = 'millave';//No debe tener espacios 
 
 
 router.post('/', function(req, res, next) {
@@ -23,7 +24,7 @@ router.post('/', function(req, res, next) {
    
 
 
-    enigma.genHash(valorEncriptacion,key,usuario.clave,function(err,hash){
+    Enigma.genHash(EnigmaClaves.valorEncriptacion,EnigmaClaves.key,usuario.clave,function(err,hash){
     if(err) return console.log(err);//Solo se ejecutara si existe un error 
     usuario.clave=hash;
     console.log(hash)//2dl3lkwkj13kj12k12kj321kj 

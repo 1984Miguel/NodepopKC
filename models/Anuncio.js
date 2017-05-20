@@ -27,7 +27,10 @@ anuncioSchema.statics.list= function (filter, limit,skip, fields, sort, callback
 var Anuncio = mongoose.model("Anuncio", anuncioSchema);
 
 module.exports= Anuncio; 
-/*
+/*  Crea un anuncio esta desabilitado para no crear usuarios cada vez que se realiza 
+    una conexion nueva.
+
+
 var PrimerAnuncio = new Anuncio({
 
 "nombre": "Bicicleta",
