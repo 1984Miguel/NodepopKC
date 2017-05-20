@@ -1,17 +1,17 @@
 {
   "name": "nodepop",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "DEBUG=nodepop:* nodemon",
+    "dev": "DEBUG=nodepop:* nodemon ./bin/www",
     "bases": "DEBUG=nodepop:* nodemon -L ./scripts/install_dbs.js"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
     "cluster": "^0.7.7",
     "cookie-parser": "~1.4.3",
-    "debug": "^2.6.8",
+    "debug": "^2.6.3",
     "ejs": "~2.5.6",
     "enigma-code": "0.0.11",
     "express": "^4.15.2",
@@ -20,6 +20,7 @@
     "morgan": "~1.8.1",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
+    "run-dev": "0.0.1-security",
     "serve-favicon": "~2.4.2"
   },
   "main": "app.js",
@@ -34,5 +35,5 @@
     "url": "https://github.com/1984Miguel/NodepopKC/issues"
   },
   "homepage": "https://github.com/1984Miguel/NodepopKC#readme",
-  "description": ""
+  "description": "Guia rapida de usuario de mi aplicacion en el codigo se pueden encontrar explicaciones detalladas a nivel tecnico de cada cosa"
 }

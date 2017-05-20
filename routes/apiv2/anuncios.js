@@ -33,7 +33,7 @@ router.get('/', function(req, res, next) {
 
     if (nombre)
     {
-        filter.nombre= {$regex:"/^"+nombre+"/i"};
+        filter.nombre=  new RegExp (nombre, "i");
     }
 
     if(minprecio){filter.precio={"$gte": minprecio};}// busca precio minimo 
@@ -87,28 +87,25 @@ anuncio.save((err ,anuncioguardado) =>{
 
 });
 
-
+/*
 router.post("/borrar", (req,res,next) =>{
     console.log(req.body);
 
     // creamos un objeto tipo agente
 
-    const idanuncio = req.body;
+    
 
-
-
-//lo guardamos en la base de datos
-Anuncio.findOne((idanuncio), function (err, model) {
+    Anuncio.remove( req.body , function(err, borrado) {
     if (err) {
-        return;
+            next(err)
+            return
     }
-     Anuncio.remove(function (err) {
-        // if no error, your model is removed
-    });
-});
+    res.json({success: true, result: borrado});
 });
 
+});
 
+*/
 
 
 

@@ -4,10 +4,10 @@ const mongoose = require("mongoose");
 
 const anuncioSchema = mongoose.Schema({
 
-nombre: {type:String, index: true},
-venta: {type:Boolean,index:true},
-precio: {type:Number,index:true},
-foto: {type:String,index:true},
+nombre: {type:String, index: true, required: true},
+venta: {type:Boolean,index:true, required: true},
+precio: {type:Number,index:true, required: true},
+foto: {type:String,index:true, required: true},
 tags: {type:[String]}
 
 });

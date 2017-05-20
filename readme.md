@@ -30,7 +30,7 @@ Podemos encontrarlos en la carpeta ./models/Anuncio.js y ./models/Usuarios
 * La busqueda de anuncios avanzada para la Version 2 tiene un metodo estatico que hablare mas adelante de el.
 
 
-#V:1
+# V1
 
 ### Routes apiV1
 
@@ -38,7 +38,7 @@ Esta primera version realiza una busqueda de todos los articulos en una peticion
 
 **localhost:3000/apivi/anuncios**
 
-#V2
+# V2
 
 ## Carpeta lib
 
@@ -113,3 +113,7 @@ localhost:3000/apiv2/anuncios.js
     * email: debe ser unico. tiene una expresion regular que verifica el formato
     * clave  se da en tipo string y el programa crea un hast gracias a enigma y lo guarda en la       base de datos     
 
+Contacto:
+
+Correo: soymingo@gmail.com
+linkedin: https://www.linkedin.com/in/miguel-mingoarranz-programador/

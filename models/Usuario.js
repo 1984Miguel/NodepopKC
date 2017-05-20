@@ -9,9 +9,9 @@ let key = 'millave';//No debe tener espacios
 
 const usuarioSchema = mongoose.Schema({
 
-nombre:{type:String, index: true, unique:true},
-email: {type:String, index: true, unique:true},
-clave: {type:String, index: true},
+nombre:{type:String, index: true, unique:true, required: true},
+email: {type:String, index: true, unique:true, required: true},
+clave: {type:String, index: true, required: true }
 
 });
 
