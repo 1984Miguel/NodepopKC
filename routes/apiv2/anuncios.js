@@ -8,10 +8,16 @@ router.use(basiAuth);
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-    const tag= req.query.tag;
+    const tags= req.query.tags;
     const venta = req.query.venta;
     const nombre = req.query.nombre;
-    const rango = req.query.rango; //rango
+
+    const minprecio=parseInt(req.query.minprecio);
+    const precio=parseInt(req.query.precio);
+    
+    const masprecio=parseInt(req.query.masprecio);
+
+     const rango = req.query.rango; //rango
     
     const limit = parseInt(req.query.limit); 
     
@@ -22,27 +28,27 @@ router.get('/', function(req, res, next) {
    
     const filter={}
     
-    if (tag){
-        filter.tag ={tags:{ $in:[tag]}};
-    }
-    
-     if (venta){
-        filter.venta =venta;
-    }
+        if (tags){filter.tags =tags};// busca tag en el array
+        if (venta){ filter.venta =venta;} // busca true o false
 
     if (nombre)
     {
-        filter.nombre= /^+nombre+\i"/;
+        filter.nombre= {$regex:"/^"+nombre+"/i"};
     }
-if(rango)
+
+    if(minprecio){filter.precio={"$gte": minprecio};}// busca precio minimo 
+    if(precio){filter.precio=precio;} // precio exacto
+    if(masprecio){ filter.precio={"$lte": masprecio};} // precio maximo
+
+if(rango) // establece 4 rangos de precios predefinidos
 {
     console.log(rango)
     switch(rango)
 {
-    case "a": filter.precio= {precio:{$tg:10 , $lg:50}};  ;break;
-    case "b": filter.precio={precio:{$gt:10}};  ;break;
-    case "c": filter.precio={precio:{$gl:50}}  ;break;
-    case "d": filter.precio={precio:50}  ;break;       
+    case "a": filter.precio= {"$gte":10 ,"$lte":50};  ;break; // entre 10 y 50
+    case "b": filter.precio={"$gte":10}  ;break; //mayor a 10
+    case "c": filter.precio={"$lte":50}  ;break; // menor a 50
+    case "d": filter.precio=50  ;break;       // precio 50
     
 }
 }
@@ -80,6 +86,32 @@ anuncio.save((err ,anuncioguardado) =>{
 
 
 });
+
+
+router.post("/borrar", (req,res,next) =>{
+    console.log(req.body);
+
+    // creamos un objeto tipo agente
+
+    const idanuncio = req.body;
+
+
+
+//lo guardamos en la base de datos
+Anuncio.findOne((idanuncio), function (err, model) {
+    if (err) {
+        return;
+    }
+     Anuncio.remove(function (err) {
+        // if no error, your model is removed
+    });
+});
+});
+
+
+
+
+
 
 
 

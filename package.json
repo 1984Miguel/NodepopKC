@@ -11,8 +11,9 @@
     "body-parser": "~1.17.1",
     "cluster": "^0.7.7",
     "cookie-parser": "~1.4.3",
-    "debug": "^2.6.7",
+    "debug": "^2.6.8",
     "ejs": "~2.5.6",
+    "enigma-code": "0.0.11",
     "express": "^4.15.2",
     "fs": "0.0.1-security",
     "mongoose": "^4.9.9",
@@ -25,13 +26,13 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1984Miguel/Kc_Nodejs.git"
+    "url": "git+https://github.com/1984Miguel/NodepopKC.git"
   },
   "author": "Miguel Mingoarranz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/1984Miguel/Kc_Nodejs/issues"
+    "url": "https://github.com/1984Miguel/NodepopKC/issues"
   },
-  "homepage": "https://github.com/1984Miguel/Kc_Nodejs#readme",
+  "homepage": "https://github.com/1984Miguel/NodepopKC#readme",
   "description": ""
 }

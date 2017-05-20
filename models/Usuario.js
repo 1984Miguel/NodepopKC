@@ -2,12 +2,16 @@
 
 const mongoose = require("mongoose");
 
+const enigma = require('enigma-code');//llama el modulo  
+const valorEncriptacion = 5;//puede ser cualquier numero 
+let key = 'millave';//No debe tener espacios 
+
 
 const usuarioSchema = mongoose.Schema({
 
-nombre:String,
-email: String,
-clave: String
+nombre:{type:String, index: true, unique:true},
+email: {type:String, index: true, unique:true},
+clave: {type:String, index: true},
 
 });
 
