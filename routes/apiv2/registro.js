@@ -7,9 +7,6 @@ const Enigma= require("enigma-code") // traigo modulo de enigmas
 const EnigmaClaves=require("../../lib/enigma"); // obtengo clave y valor de encriptacion
 
 
-//const valorEncriptacion = 5;//puede ser cualquier numero 
-//let key = 'millave';//No debe tener espacios 
-
 
 router.post('/', function(req, res, next) {
  
