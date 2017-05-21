@@ -110,6 +110,8 @@ localhost:3000/apiv2/anuncios.js
 
     id: nombre del id a borrar
 
+* put : cambia informacion de un articulo cualquiera     
+
 #### registro.js
 
 * get : añado una lista de usuarios con get para facilitar correccion y trabajo
@@ -117,9 +119,11 @@ localhost:3000/apiv2/anuncios.js
  * post :permite registrarse a los usuarios bajo las siguientes condiciones:
     * nombre: debe ser unico debe contener letras o numeros
     * email: debe ser unico. tiene una expresion regular que verifica el formato
-    * clave  se da en tipo string y el programa crea un hast gracias a enigma y lo guarda en la       base de datos     
+    * clave  se da en tipo string y el programa crea un hast gracias a enigma y lo guarda en la       base de datos    
 
-Contacto:
+  * Put : cambia los datos de un usuario: busca por id y modifica todos los parametros incluida la contraseña con hast   
 
-Correo: soymingo@gmail.com
-linkedin: https://www.linkedin.com/in/miguel-mingoarranz-programador/
+#Contacto:
+
+* Correo: soymingo@gmail.com
+* linkedin: https://www.linkedin.com/in/miguel-mingoarranz-programador/

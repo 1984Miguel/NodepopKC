@@ -87,11 +87,18 @@ router.delete("/", (req,res,next) =>{
 
 });
 
+router.put('/', (req, res) => {
 
+const id= req.body.id;
 
-
-
-
+Anuncio.update({ _id: id }, req.body, (err, anuncioModificado) => {
+        if (err) {
+            next(err);
+            return;
+        }
+        res.json({succes: true, result: req.body.id});
+    });
+});
 
 
 

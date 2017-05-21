@@ -51,6 +51,49 @@ router.post('/', function(req, res, next) {
 
 });
 
+router.delete("/", (req,res,next) =>{
+    console.log(req.body.id);
+
+   
+    const id= req.body.id;
+    
+
+    Usuario.remove(({_id: id}),(err, borrado) => {
+    if (err) {
+            next(err)
+            return
+    }
+    res.json({success: true, result: borrado});
+});
+
+});
+
+router.put('/', (req, res) => {
+
+    const id= req.body.id;
+
+    if(req.body.clave)
+        {
+
+             Enigma.genHash(EnigmaClaves.valorEncriptacion,EnigmaClaves.key,req.body.clave,function(err,hash){
+               if(err) return console.log(err);//Solo se ejecutara si existe un error 
+                 req.body.clave=hash;
+                 console.log(hash)
+                 //esa funcion retorna por defecto en hash la contraseña encriptada 
+             });
+        }
+
+
+Usuario.update({ _id: id }, req.body, (err, anuncioModificado) => {
+        if (err) {
+            next(err);
+            return;
+        }
+        res.json({succes: true, result: req.body.id});
+    });
+});
+
+
 module.exports = router;
 
 
