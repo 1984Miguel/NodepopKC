@@ -23,5 +23,20 @@
 "precio": 15.00,
 "foto": "gusarapo.png",
 "tags": [ "lifestyle", "mobile"]
-} ]
+} , {
+"nombre": "Perro", 
+"venta": false,
+"precio": 1000.00,
+"foto": "perro.png",
+"tags": [ "lifestyle"]
+} , {
+"nombre": "Gato", 
+"venta": false,
+"precio": 2000,
+"foto": "miau.png",
+"tags": [ "lifestyle", "mobile"]
+} 
+
+
+]
 }

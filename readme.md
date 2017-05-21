@@ -42,6 +42,12 @@ Esta primera version realiza una busqueda de todos los articulos en una peticion
 
 ## Carpeta lib
 
+Usuario para pruebas en mi base de datos
+
+  "nombre" : "pedro",
+    "email": "pepito@pepito.com",
+    "clave": "a12345qwerty"
+
 ### BasicAuth.js
 
 Esta libreria se encargara de validar los usuarios para acceder a la aplicacion en la version 2. Comprobara de la base de datos las creenciales. Se apolla en la libreria enigma para comprobar y verificar que ambis hash coinciden. 

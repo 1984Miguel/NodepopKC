@@ -6,14 +6,25 @@
 },
 {
      "nombre" : "Pepe",
-    "email": "pepito@pepito.com",
+    "email": "pepito32@pepito.com",
     "clave": "b12345qwerty"
 },
 {
      "nombre" : "eloy",
-    "email": "pepito@pepito.com",
+    "email": "pepito23@pepito.com",
+    "clave": "c12345qwerty"
+},
+{
+     "nombre" : "Miguel",
+    "email": "pepito23@pepito.com",
+    "clave": "d12345qwerty"
+},
+{
+     "nombre" : "Maria",
+    "email": "pepito23@pepito.com",
     "clave": "c12345qwerty"
 }
+
 
 
 ]
