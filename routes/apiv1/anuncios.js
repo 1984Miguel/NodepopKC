@@ -6,8 +6,7 @@ const Anuncio = require("../../models/Anuncio")
 router.get('/', function(req, res, next) {
     console.log("entro ver anuncios")
   Anuncio.find({},(err,anuncio) =>{
-
-    res.status(200).send(anuncio)
+      res.status(200).send(anuncio)
   });
 });
 

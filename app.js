@@ -32,6 +32,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+  app.use((req,res,next)=>{
+
+    console.log("soy un midelware y estoy evaluando lapeticion, ", req.originalUrl);
+    next();
+  });
+
 
 //llamo a las diferentes rutas de mi proyecto
 //app.use('/', index);

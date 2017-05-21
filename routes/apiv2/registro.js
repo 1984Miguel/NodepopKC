@@ -31,13 +31,13 @@ router.post('/', function(req, res, next) {
 
 
     usuario.save((err ,usuarioguardado) =>{
-    if(err)
-   {
-       next(err);
-       return
-   }
-   res.json({success: true, result: usuarioguardado});
-});
+         if(err)
+        {
+             next(err);
+             return
+        }
+        res.json({success: true, result: usuarioguardado});
+    });
 
 
 });
