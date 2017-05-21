@@ -8,6 +8,15 @@ const EnigmaClaves=require("../../lib/enigma"); // obtengo clave y valor de encr
 
 
 
+
+router.get('/', function(req, res, next) {
+    console.log("entro ver anuncios")
+     Usuario.find({},(err,anuncio) =>{
+    res.status(200).send(anuncio)
+  });
+});
+
+
 router.post('/', function(req, res, next) {
  
    console.log(req.body);

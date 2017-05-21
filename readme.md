@@ -106,7 +106,13 @@ localhost:3000/apiv2/anuncios.js
     foto   : nombre archivo ( en futuas aplicaciones se guardara todo en la misma carpeta y el programa se encargara de escribir la ruta delante del nombre EJ "../fotos/"+ nombreArchivo)
     tags    : etiquetas del articulo en formato array 
 
+* Delete esta opcion borra un anuncio
+
+    id: nombre del id a borrar
+
 #### registro.js
+
+* get : añado una lista de usuarios con get para facilitar correccion y trabajo
 
  * post :permite registrarse a los usuarios bajo las siguientes condiciones:
     * nombre: debe ser unico debe contener letras o numeros

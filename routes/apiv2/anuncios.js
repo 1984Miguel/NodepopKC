@@ -69,15 +69,15 @@ router.post("/", (req,res,next) =>{
     });
 });
 
-/*
-router.post("/borrar", (req,res,next) =>{
-    console.log(req.body);
 
-    // creamos un objeto tipo agente
+router.delete("/", (req,res,next) =>{
+    console.log(req.body.id);
 
+   
+    const id= req.body.id;
     
 
-    Anuncio.remove( req.body , function(err, borrado) {
+    Anuncio.remove(({_id: id}),(err, borrado) => {
     if (err) {
             next(err)
             return
@@ -87,7 +87,7 @@ router.post("/borrar", (req,res,next) =>{
 
 });
 
-*/
+
 
 
 
