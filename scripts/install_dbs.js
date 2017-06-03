@@ -2,7 +2,7 @@
 
 const fs= require ("fs")
 const mongoose= require("mongoose");
-const Anuncio = require("../models/anuncio")
+const Anuncio = require("../models/Anuncio")
 const Usuario = require("../models/Usuario")
 
 const enigma= require("enigma-code")
