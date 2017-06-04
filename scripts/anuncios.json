@@ -9,19 +9,19 @@
 "nombre": "iPhone 3GS", 
 "venta": false,
 "precio": 50.00,
-"foto": "iphone.png",
+"foto": "iphone.jpg",
 "tags": [ "lifestyle", "mobile"]
 } , {
 "nombre": "Moto", 
 "venta": true,
 "precio": 1500.00,
-"foto": "moto.png",
+"foto": "moto.jpg",
 "tags": [ "lifestyle", "mobile"]
 } , {
 "nombre": "Gusarapos", 
 "venta": false,
 "precio": 15.00,
-"foto": "gusarapo.png",
+"foto": "gusarapo.jpg",
 "tags": [ "lifestyle", "mobile"]
 } , {
 "nombre": "Perro", 
@@ -33,7 +33,7 @@
 "nombre": "Gato", 
 "venta": false,
 "precio": 2000,
-"foto": "miau.png",
+"foto": "miau.jpg",
 "tags": [ "lifestyle", "mobile"]
 } 
 
