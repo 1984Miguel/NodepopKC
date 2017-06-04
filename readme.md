@@ -4,6 +4,20 @@
 
 Guia rapida de usuario de mi aplicacion en el codigo se pueden encontrar explicaciones detalladas a nivel tecnico de cada cosa
 
+### Dominio Ejercicio 1 Devos
+
+Existe dentro del dominio enlaces a todas las paginas del proyecto
+
+nodepop.mingoarranz.com
+
+### Dominio Ejercicio 2 Devos
+
+Esta pagina la usare de portfolio personal (actualmente se encuentra en mejora)
+
+mingoarranz.com
+
+
+
 ### Iniciar servidor
 
 * Inicio nornal: npm start
