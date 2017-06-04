@@ -40,8 +40,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //llamo a las diferentes rutas de mi proyecto
-//app.use('/', index);
-//app.use('/users', users);
+app.use('/', index);
+app.use('/users', users);
 app.use('/apiv1/anuncios', require('./routes/apiv1/anuncios'));
 app.use('/apiv2/anuncios', require('./routes/apiv2/anuncios'));
 
