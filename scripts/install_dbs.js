@@ -17,7 +17,7 @@ function borrar()
  return new Promise((resolve, reject)=>{
     var MongoClient = require('mongodb').MongoClient;
     
-    MongoClient.connect("mongodb://localhost/nodeapi", function(err, db) {
+    MongoClient.connect("nodemiguel:miguel123@mongodb://localhost/nodeapi", function(err, db) {
         
         db.dropDatabase(function(err, result) {});
         });
