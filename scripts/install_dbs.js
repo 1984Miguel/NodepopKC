@@ -17,7 +17,7 @@ function borrar()
  return new Promise((resolve, reject)=>{
     var MongoClient = require('mongodb').MongoClient;
     
-    MongoClient.connect("mongodb://nodemiguel:miguel123@localhost/nodeapi", function(err, db) {
+    MongoClient.connect("mongodb://nodemiguel:miguel123@localhost:27017/nodeapi", function(err, db) {
         
         db.dropDatabase(function(err, result) {});
         });
@@ -32,7 +32,7 @@ function borrar()
 function leerarchivoanun(loc)
 {
  return new Promise((resolve, reject)=>{
-    mongoose.connect("mongodb://nodemiguel:miguel123@localhost/nodeapi");
+    mongoose.connect("mongodb://nodemiguel:miguel123@localhost:27017/nodeapi");
      fs.readFile("./scripts/"+loc+".json","utf-8",(err,data) =>{
             //console.log(JSON.parse(data)[loc][0]['nombre'])
             const aux= JSON.parse(data)[loc];
@@ -61,7 +61,7 @@ function leerarchivoanun(loc)
 function leerarchivouser(loc)
 {
  return new Promise((resolve, reject)=>{
-    mongoose.connect("mongodb://nodemiguel:miguel123@localhost/nodeapi");
+    mongoose.connect("mongodb://nodemiguel:miguel123@localhost:27017/nodeapi");
      fs.readFile("./scripts/"+loc+".json","utf-8",(err,data) =>{
             //console.log(JSON.parse(data)[loc][0]['nombre'])
             const aux= JSON.parse(data)[loc];
