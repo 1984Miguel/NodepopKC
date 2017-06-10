@@ -4,7 +4,7 @@
 
 Guia rapida de usuario de mi aplicacion en el codigo se pueden encontrar explicaciones detalladas a nivel tecnico de cada cosa
 
-#Devops 
+# Devops 
 
 Información en readme_devops.md
 
