@@ -4,17 +4,21 @@
 
 Guia rapida de usuario de mi aplicacion en el codigo se pueden encontrar explicaciones detalladas a nivel tecnico de cada cosa
 
-### Dominio Ejercicio 1 Devos
+#Devops 
+
+Información en readme_devops.md
+
+### Dominio Ejercicio 1 Devops
 
 Existe dentro del dominio enlaces a todas las paginas del proyecto
 
-nodepop.mingoarranz.com
+nodepop.mingoarranz.com 
 
-### Dominio Ejercicio 2 Devos
+### Dominio Ejercicio 2 Devops
 
 Esta pagina la usare de portfolio personal (actualmente se encuentra en mejora)
 
-mingoarranz.com
+mingoarranz.com y www.mingoarranz.com
 
 
 
